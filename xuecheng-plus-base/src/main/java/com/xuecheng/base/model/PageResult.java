@@ -13,7 +13,6 @@ import java.util.List;
  * @date 2023/2/11 15:40
  */
 @Data
-@ToString
 public class PageResult<T> implements Serializable {
 
     // 数据列表

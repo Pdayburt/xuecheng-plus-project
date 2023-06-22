@@ -6,14 +6,14 @@ server:
 spring:
   application:
     name: content-api
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.101.65:3306/xc402_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
-    username: root
-    password: mysql
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://124.221.23.187:3306/xc148_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    username: root
+#    password: 123456
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
 
 swagger:
   title: "学成在线内容管理系统"

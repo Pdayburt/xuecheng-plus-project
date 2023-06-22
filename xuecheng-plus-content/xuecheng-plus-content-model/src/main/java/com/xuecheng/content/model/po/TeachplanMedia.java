@@ -1,24 +1,20 @@
 package com.xuecheng.content.model.po;
 
-import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
-
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import lombok.Data;
 
 /**
- * <p>
  * 
- * </p>
- *
- * @author itcast
+ * @TableName teachplan_media
  */
+@TableName(value ="teachplan_media")
 @Data
-@TableName("teachplan_media")
 public class TeachplanMedia implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
     /**
      * 主键
      */
@@ -28,36 +24,45 @@ public class TeachplanMedia implements Serializable {
     /**
      * 媒资文件id
      */
+    @TableField(value = "media_id")
     private String mediaId;
 
     /**
      * 课程计划标识
      */
+    @TableField(value = "teachplan_id")
     private Long teachplanId;
 
     /**
      * 课程标识
      */
+    @TableField(value = "course_id")
     private Long courseId;
 
     /**
      * 媒资文件原始名称
      */
-    @TableField("media_fileName")
+    @TableField(value = "media_fileName")
     private String mediaFilename;
 
-    @TableField(fill = FieldFill.INSERT)
+    /**
+     * 
+     */
+    @TableField(value = "create_date")
     private LocalDateTime createDate;
 
     /**
      * 创建人
      */
+    @TableField(value = "create_people")
     private String createPeople;
 
     /**
      * 修改人
      */
+    @TableField(value = "change_people")
     private String changePeople;
 
-
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

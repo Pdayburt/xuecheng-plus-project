@@ -11,7 +11,6 @@ import lombok.ToString;
  * @date 2023/2/11 15:33
  */
 @Data
-@ToString
 public class PageParams {
 
     //当前页码
@@ -19,7 +18,7 @@ public class PageParams {
     private Long pageNo = 1L;
     //每页显示记录数
     @ApiModelProperty("每页记录数")
-    private Long pageSize = 30L;
+    private Long pageSize = 10L;
 
     public PageParams() {
     }
